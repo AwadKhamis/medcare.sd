@@ -11,6 +11,59 @@
         <title> homepage</title>
     </head>
     <body> 
+<!-- Article navigation button →→→
+
+<button id="articleNavigationButton">Show Navigation</
+
+button>
+
+<!-- Side panel article navigation →→->
+
+<div class="article-navigation" id="articleNavigationPanel">
+
+<h2>Article Navigation</h2>
+
+<div class="article-navigation-title">
+
+<a href="#article1">Hypothetical Article 1</a>
+
+</div>
+
+<div class="article-navigation-title">
+
+<a href="#article2">Hypothetical Article 2</a>
+
+</div>
+
+<div class="article-navigation-title">
+
+<a href="#article3">Hypothetical Article 3</a>
+
+</div>
+
+<!-- Add more articles titles and links here -->
+
+</div>
+
+<!-- Rest of your website content -->
+
+<!-- Example articles -->
+
+<article id="article1">
+
+<h1>Hypothetical Article 1</h1>
+
+<!-- Article content here -->
+
+</article>
+
+<article id="article2">
+
+<h1>Hypothetical Article
+
+<!-- Article content here -->>
+
+</article>
           
         <style> 
             .container {
@@ -354,11 +407,75 @@ And then subtrack it by 100. Use this new number as the
                 Flex-wrap: wrap;
             }
         }
+/* Side panel styles */
+
+article-navigation {
+
+display: none;
+
+position: fixed;
+
+top: 50%;
+
+right:0;
+
+transform: translateY(-50%);
+
+background-color: #f1f1f1;
+
+width: 200px;
+
+padding: 20px;
+
+}
+
+/* Article title styles */
+
+article-navigation-title {
+
+margin-bottom: 10px;
+
+} 
+
     </style>
 
 
 
+<script>
 
+// Get the button and navigation panel
+
+var button =
+
+document.getElementById("articleNavigationButton");
+
+var panel =
+
+document.getElementById("articleNavigation Panel");
+
+// Add click event listener to the button
+
+button.addEventListener("click", function() {
+
+// Toggle the visibility of the navigation panel
+
+if (panel.style.display = "none") {
+
+panel.style.display="block";
+
+} else {
+
+panel.style.display='none';
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
        
     </body>
     </html>
