@@ -152,7 +152,13 @@
         box-shadow: rgb(0, 0, 0);
         shadow-radius: 5px;
     }		.gray-background {		background-color: #f2f2f2;		}				.hidden-content {		display: none;		}				.toggle-text-container {		 text-align: center;		 display: flex;		 justify-content: space-between;		 align-items:center;		 height: 50px;		 margin-bottom: 10px;		 width: 400px;				}				.toggle-text {		display: flex;		align-items: center;		padding: 5px;		background-color: gray;		border: none;		color: white;		width: 100%;		}				.toggle-text.toggle-sign {		margin-left: 5px;		}    	.toggle-text.highlighted {	   background-color: blue;		}	
-	li {	font-family: 'Noto Sans Arabic', sans-serif;      margin: 0;      padding: 20px;	  color: #666;      font-size: 18px;      line-height: 1.0;      margin-bottom: 5px;		}
+	li {
+	font-family: 'Noto Sans Arabic', sans-serif;      margin: 0;    
+  padding: 5px;	
+  color: #666;    
+  font-size: 18px; 
+     line-height: 1.6;  
+    margin-bottom: 5px;		}
 
   </style>
       
@@ -229,14 +235,12 @@
       
         if (navigator.share) {
             navigator.share(shareData)
-            .then(() => {
-                console.log('Shared successfully');
-            })
-            .catch((error) => {
-               console.log('Error sharing', error);
+            .catch(function(error) {
+                console.error('Error sharing', error);
             });
         } else {
-            alert('Sharing is not Supported on this browser.');
+            const shareUrl = 'https://awadkhamis.github.io/medcare.sd/Diabetes-Hypertension.html/share?url=' + encodeURlComponent(shareData.url);
+   window.open(shareUrl, '_blank'); 
         }
 
      }
