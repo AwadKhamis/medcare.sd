@@ -151,7 +151,8 @@
         height: 150px;
         box-shadow: rgb(0, 0, 0);
         shadow-radius: 5px;
-    }		.gray-background {		background-color: #f2f2f2;		}				.hidden-content {		display: none;		}				.toggle-text-container {		 text-align: center;		 display: flex;		 justify-content: space-between;		 align-items:center;		 height: 50px;		 margin-bottom: 10px;		 width: 400px;				}				.toggle-text {		display: flex;		align-items: center;		padding: 5px;		background-color: gray;		border: none;		color: white;		width: 100%;		}				.toggle-text.toggle-sign {		margin-left: 5px;		}    	.toggle-text.highlighted {	   background-color: blue;		}		li {	font-family: 'Noto Sans Arabic', sans-serif;      margin: 0;      padding: 20px;	  color: #666;      font-size: 16px;      line-height: 1.6;      margin-bottom: 5px;		}
+    }		.gray-background {		background-color: #f2f2f2;		}				.hidden-content {		display: none;		}				.toggle-text-container {		 text-align: center;		 display: flex;		 justify-content: space-between;		 align-items:center;		 height: 50px;		 margin-bottom: 10px;		 width: 400px;				}				.toggle-text {		display: flex;		align-items: center;		padding: 5px;		background-color: gray;		border: none;		color: white;		width: 100%;		}				.toggle-text.toggle-sign {		margin-left: 5px;		}    	.toggle-text.highlighted {	   background-color: blue;		}	
+	li {	font-family: 'Noto Sans Arabic', sans-serif;      margin: 0;      padding: 20px;	  color: #666;      font-size: 18px;      line-height: 1.0;      margin-bottom: 5px;		}
 
   </style>
       
@@ -220,10 +221,10 @@
     <script>
      function shareContent() {
         const shareData = {
-            title: 'السكري وارتفاع ضغط الدم',
-            text: 'يعاني اثنان من كل ثلاثة أشخاص مصابون بمرض السكري من ارتفاع ضغط الدم أو يتناولون أدوية موصوفة لخفض ضغط الدم.',
-            url: 'https://awadkhamis.github.io/medcare.sd/Diabetes-Hypertension.html',
-            image: href="https://awadkhamis.github.io/medcare.sd/img.jpg" 
+            title: document.querySelector('meta[property="og:title"]').getAttribute('content'), 
+            text: document.querySelector('meta[property="og:description"]').getAttribute('content'),
+            url: window.lacation.href,
+            image: document.querySelector('meta[property="og:image"]').getAttribute('content')
         };
       
         if (navigator.share) {
