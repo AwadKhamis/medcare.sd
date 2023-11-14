@@ -167,29 +167,21 @@
 <button class="a2a_dd" href="#">مشاركة المقال</button>
 
 <script>
+    function setShareData() {
+      var shareButtons = document.querySelectorAll('.a2a_dd');
 
-function setShareData () {
-var shareButtons = document.querySelectorAll('.a2a_dd');
+      for (var i = 0; i < shareButtons.length; i++) {
+        shareButtons[i].setAttribute('data-a2a-url', 'https://awadkhamis.github.io/medcare.sd/Diabetes.html'); // Replace with your article Url 
+        shareButtons[i].setAttribute('data-a2a-title', 'ماهو مرض السكري؟ '); // Replace with your article title
+        shareButtons[i].setAttribute('data-a2a-media', 'https://awadkhamis.github.io/medcare.sd/Diabetes.png'); // Replace with your article image URL
+      }
+    }
 
-for (var i =0; i < shareButtons.length;i++) { 
-
-shareButtons[i].setAttribute('data-a2a-url', 'https://awadkhamis.github.io/medcare.sd/Diabetes.html'); 
-
-shareButtons[i].setAttribute('data-a2a-title', 'ماهو مرض السكري؟ '); 
-
-shareButtons[i].setAttribute('data-a2a-media', 'https://awadkhamis.github.io/medcare.sd/Diabetes.png'); 
-
- } 
-} 
-
-document.addEventListener('DOMContetLoaded', 
-function () {
-
-setShareData ();
-a2a.init('page');
-});
-
-</script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setShareData();
+      a2a.init('page');
+    });
+  </script>
 
   <p>السكري هو حالة صحية مزمنة (طويلة الأمد) تؤثر على كيفية تحويل جسمك للطعام إلى طاقة. يقوم جسمك بتحطيم معظم الطعام الذي تأكله إلى سكر (جلوكوز) ويطلقه في دورة الدم الخاصة بك. عندما يرتفع مستوى السكر في الدم الخاص بك، يُشير ذلك إلى بنكرياسيك لإطلاق الأنسولين. الأنسولين يعمل مثل مفتاح يسمح للسكر في الدم بالدخول إلى خلايا جسمك لاستخدامه كطاقة. مع السكري، لا ينتج جسمك ما يكفي من الأنسولين أو لا يمكن استخدامه بفعالية. عندما لا يكون هناك ما يكفي من الأنسولين أو تتوقف الخلايا عن الاستجابة للأنسولين، تظل كمية زائدة من السكر في الدم. مع مرور الوقت، يمكن أن يتسبب ذلك في مشاكل صحية خطيرة، مثل أمراض القلب وفقدان الرؤية وأمراض الكلى. لا يوجد علاج حتى الآن للسكري، ولكن فقدان الوزن، وتناول طعام صحي، وممارسة النشاط البدني يمكن أن يكون لها تأثير كبير. يمكنك أيضًا القيام بأشياء أخرى للمساعدة مثل:</p>
   <ul class="my-list">
