@@ -7,7 +7,7 @@
 <head>
   <title>السكري</title>
  <link rel="icon" type="image/png" href="https://awadkhamis.github.io/medcare.sd/icon.png" alt = "icon">
-<script src="https://static.addtoany.com/menu/page.js" async ="async"></script>
+
   <style>
     body {
       font-family: 'Noto Sans Arabic', sans-serif;
@@ -168,13 +168,26 @@
 
 <script>
 
-a2a_config {
+function setShareData () {
+var shareButtons = document.querySelectorAll('.a2a_dd');
 
-url: 'https://awadkhamis.github.io/medcare.sd/Diabetes.html',
-title: 'ماهو مرض السكري؟', 
-media: 'https:awadkhamis.github.io/medcare.sd/Diabetes.png'
+for (var i =0; i < shareButtons.length;i++) { 
 
-};
+shareButtons[i].setAttribute('data-a2a-url', 'https://awadkhamis.github.io/medcare.sd/Diabetes.html'); 
+
+shareButtons[i].setAttribute('data-a2a-title', 'ماهو مرض السكري؟ '); 
+
+shareButtons[i].setAttribute('data-a2a-media', 'https://awadkhamis.github.io/medcare.sd/Diabetes.png'); 
+
+ } 
+} 
+
+document.addEventListener('DOMContetLoaded', 
+function () {
+
+setShareData ();
+a2a.init('page');
+});
 
 </script>
 
