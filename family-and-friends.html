@@ -363,5 +363,29 @@ color: white;
 });
     	</script>
     
+    <script> 
+     function setShareData() { 
+       var shareButtons = document.querySelectorAll('.a2a_dd'); 
+  
+       for (var i = 0; i < shareButtons.length; i++) { 
+         shareButtons[i].setAttribute('data-a2a-url', 'https://awadkhamis.github.io/medcare.sd/family-and-friends.html'); // Replace with your article Url  
+  
+         shareButtons[i].setAttribute('data-a2a-title', 'أصدقاء، عائلة، ومرض السكري'); // Replace with your article title 
+  
+         shareButtons[i].setAttribute('data-a2a-media', 'https://awadkhamis.github.io/medcare.sd/Family.jpg'); // Replace with your article image URL 
+  
+ shareButtons[i].setAttribute('data-a2a-type', 'article'); // Add the Open Graph type  
+  
+       shareButtons[i].setAttribute('data-a2a-description', 'واحدة من أفضل الطرق للتنبؤ بمدى قدرة شخص على إدارة مرض السكري: مدى الدعم الذي يحصل عليه من العائلة والأصدقاء.'); // Add a brief description of your article 
+  
+       } 
+     } 
+  
+     document.addEventListener('DOMContentLoaded', function() { 
+       setShareData(); 
+       a2a.init('page'); 
+     }); 
+	 </script>
+
  </body>
 </html>
