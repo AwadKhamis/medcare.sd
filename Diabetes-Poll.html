@@ -270,5 +270,23 @@ color: white;
   </div>
     	</footer>
       <p align-items="center" >&copy; .2024 MedCare Clinic</p>  
+    <script>
+    	document.addEventListener("DOMContentLoaded", function() {
+  const dropdownTriggers = document.querySelectorAll(".footer-line p");
+  
+  dropdownTriggers.forEach(function(trigger) {
+    trigger.addEventListener("click", function() {
+      const dropdownList = this.nextElementSibling;
+      
+      if (dropdownList.style.display === "block") {
+        dropdownList.style.display = "none";
+      } else {
+        dropdownList.style.display = "block";
+      }
+    });
+  });
+});
+    	</script>
+    
 </body>
 </html>
